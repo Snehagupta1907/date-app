@@ -1,3 +1,4 @@
+// src/App.js
 import { useState, useRef, useEffect } from 'react';
 import myGif1 from './assets/a5480113-7d1f-4c44-9b9e-3c365aa6ea7d_untitled_artwork (1).gif';
 import myGif2 from './assets/429a890a39e70d522d52c7e52bce8535.gif';
@@ -55,17 +56,17 @@ function App() {
   };
 
   return (
-    <div className='mt-28'>
+    <div className='container md:mx-auto mt-12'>
       <h1 className='font-bold text-gray-700 flex justify-center items-center text-4xl mb-6'>{displayText}</h1>
       <div className='flex flex-col items-center justify-center'>
-        <img className='w-[300px] h-[300px] object-cover' src={mainGif} alt="My GIF" />
+        <img className='w-full sm:w-[300px] h-auto object-cover' src={mainGif} alt="My GIF" />
         {showHeartGif && (
-          <div className='absolute top-48 left-[700px] transform rotate-45'>
+          <div className='sm:absolute sm:top-44  sm:left-[700px] transform rotate-45'>
             <img className='w-16 h-16' src={heartGif} alt="Heart GIF" />
           </div>
         )}
 
-        <div className='flex items-center justify-center gap-16 mt-6'>
+        <div className='flex flex-row items-center justify-center gap-4 md:gap-16 mt-6'>
           <button
             ref={yesButtonRef}
             className='focus:outline-none text-white bg-pink-500 hover:bg-pink-800 focus:ring-4 focus:ring-pink-300 font-bold rounded-lg text-sm px-5 py-2.5 mb-2 yes-btn'
